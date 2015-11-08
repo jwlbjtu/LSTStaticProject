@@ -30,6 +30,21 @@ h6 {
     letter-spacing: 1px;
 }
 
+.subheader {
+	font-size: 26px;
+    margin-top: 20px;
+    display: block;
+    font-family: "futura-pt",sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.2;
+    text-transform: none;
+}
+
+.medium {
+	font-size: 60px;
+}
+
 p {
     margin: 0 0 25px;
     font-size: 18px;
@@ -134,10 +149,15 @@ a:focus {
     }
 
     .navbar-custom.top-nav-collapse {
-        padding: 0;
+        padding: 15px;
         border-bottom: 1px solid rgba(255,255,255,.3);
         background: #000;
     }
+}
+
+.navbar-text > a {
+    color: inherit;
+    text-decoration: none;
 }
 
 .intro {
@@ -294,6 +314,25 @@ a:focus {
     }
 }
 
+.social-media-section {
+	padding: 80px 0 150px 0;
+	color:#686868;
+	background-color: #fff;
+}
+
+#social-meida .btn{
+	margin-top: 60px;
+	margin-bottom: 155px;
+}
+
+#social-meida li {
+	margin: 0 15px;
+}
+
+.bottom-section {
+	padding-bottom: 250px;
+}
+
 .btn {
     border-radius: 0;
     text-transform: uppercase;
@@ -302,6 +341,7 @@ a:focus {
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
+    border-radius: 5px;
 }
 
 .btn-default {
@@ -316,6 +356,44 @@ a:focus {
     outline: 0;
     color: #000;
     background-color: #42dca3;
+}
+
+.btn-contact,
+.btn-contact:focus {
+	border: 1px solid #07cca4;
+	outline: 0;
+    color: #fff;
+    background-color: #07cca4;
+}
+
+.btn-contact:hover {
+	border: 1px solid #1d9b6c;
+	outline: 0;
+    color: #fff;
+    background-color: #1d9b6c;
+}
+
+.btn-close {
+	border: none;
+    color: #07cca4;
+    background-color: transparent;
+}
+
+.btn-close:hover,
+.btn-close:focus {
+	border: none;
+	outline: 0;
+    color: #1d9b6c;
+    background-color: transparent;
+}
+
+.navbar-btn,
+.navbar-btn:hover,
+.navbar-btn:focus {
+	border: none;
+	outline: 0;
+	color: #fff;
+	background-color: transparent;
 }
 
 ul.banner-social-buttons {
@@ -341,11 +419,25 @@ ul.banner-social-buttons {
 }
 
 footer {
-    padding: 50px 0;
+    font-family: "futura-pt",sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    background: #424242;
+    padding: 30px 0;
+    color: #FFF;
+    position: relative;
+    overflow: hidden;
 }
 
 footer p {
-    margin: 0;
+	margin: 0;
+	font-size: 18px;
+}
+
+.footer-bottom {
+	margin-bottom: 0;
+	
 }
 
 ::-moz-selection {
@@ -370,4 +462,65 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: rgba(255,255,255,.2);
+}
+
+.black {
+	color: #333
+}
+
+.lg-font{
+	font-size: 18px;
+}
+
+/* Side Nav */
+
+.navmenu li a {
+    -moz-transition-property: padding,opacity;
+    -o-transition-property: padding,opacity;
+    -webkit-transition-property: padding,opacity;
+    transition-property: padding,opacity;
+    -moz-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -moz-transition-timing-function: ease;
+    -o-transition-timing-function: ease;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease;
+    display: inline-block;
+    vertical-align: middle;
+    font-family: "futura-pt",sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+    opacity: 0.8;
+    display: block;
+    padding: 2% 40px;
+    font-size: 24px;
+    color: #FFF;
+}
+
+.menu-wrapper{
+	margin: 50px 0;
+}
+
+/* story page CSS */
+
+.small-media-section {
+    font-family: "futura-pt",sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    background: #353535;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.small-media-section p {
+	font-size: 22px;
+    color: #fff;
+    text-align: center;
+}
+
+.small-media-section a {
+	margin: 0 10px;
 }
