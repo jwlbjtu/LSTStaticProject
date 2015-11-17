@@ -80,6 +80,15 @@ a:focus {
     font-weight: 400;
 }
 
+.navbar-brand-logo {
+	padding: 0;
+}
+
+.logo-brand{
+	width: 100px;
+	height: 100%;
+}
+
 .navbar-custom {
     margin-bottom: 0;
     border-bottom: 1px solid rgba(255,255,255,.3);
@@ -283,7 +292,7 @@ a:focus {
 
 .content-section {
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
 }
 
 .download-section {
@@ -307,7 +316,7 @@ a:focus {
 @media(min-width:767px) {
     .content-section {
         padding-top: 150px;
-        padding-bottom: 150px;
+        padding-bottom: 50px;
     }
 }
 
@@ -406,6 +415,34 @@ a:focus {
 	outline: 0;
 	color: #fff;
 	background-color: transparent;
+}
+
+.navbar-donate-btn,
+.navbar-donate-btn:focus {
+	border: none;
+	outline: 0;
+	color: #fff;
+	background-color: transparent;
+}
+
+.navbar-donate-btn:hover{
+	color:#fff;
+	background-color: #ff9900;
+}
+
+.btn-donate,
+.btn-donate:focus {
+	border: 1px solid #ff9900;
+	outline: 0;
+	color:#fff;
+	background-color: #ff9900;
+}
+
+.btn-donate:hover{
+	border: 1px solid #e68a00;
+	outline: 0;
+	color: #fff;
+	background-color: #e68a00;
 }
 
 ul.banner-social-buttons {
