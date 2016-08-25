@@ -1,59 +1,33 @@
-(function($) {
-    $(function() {
+$(document).ready(function(){
 
-        // Variables
-        var $window = $(window);
-        window.settings = {};
-        window.settings.defaultAnimationDuration = 300;
+  var i = 1;
+  var j = 2;
+  var k = 3;
+  var max = $('#photo-container-1').data('max-num');
+  var prefix = $('#photo-container-1').data('photo-prefix');
 
-        $window.on('resize.slides', function() {
-            var pictureAspectRatio = 630 / 975;
+  $('#photo-left').on('click', function(event){
+    i--;
+    if(i <= 0) i = max;
+    $('#photo-container-1').css('background-image','url(img/programs/program-pics/' + prefix + '/' + prefix + '-' + i + '.jpg)');
+    j--
+    if(j <= 0) j = max;
+    $('#photo-container-2').css('background-image','url(img/programs/program-pics/' + prefix + '/' + prefix + '-' + j + '.jpg)');
+    k--;
+    if(k <= 0) k = max;
+    $('#photo-container-3').css('background-image','url(img/programs/program-pics/' + prefix + '/' + prefix + '-' + k + '.jpg)');
+  });
 
-            // Make slides equal heights
-            var equalHeights = function() {
-                var width = $('.slider.generic li').eq(0).width(),
-                    calculatedHeight = pictureAspectRatio * width;
+  $('#photo-right').on('click', function(event){
+    i++
+    if(i > max) i = 1;
+    $('#photo-container-1').css('background-image','url(img/programs/program-pics/' + prefix + '/' + prefix + '-' + i + '.jpg)');
+    j++
+    if(j > max) j = 1;
+    $('#photo-container-2').css('background-image','url(img/programs/program-pics/' + prefix + '/' + prefix + '-' + j + '.jpg)');
+    k++
+    if(k > max) k = 1;
+    $('#photo-container-3').css('background-image','url(img/programs/program-pics/' + prefix + '/' + prefix + '-' + k + '.jpg)');
 
-                return calculatedHeight;
-            };
-
-            var idealHeight = equalHeights();
-
-            $('.slider.generic li').css({
-                'height': idealHeight
-            });
-        });
-
-        /* Init slideshow
-         ************************/
-        var slider = $('.bxslider').bxSlider({
-            nextSelector: '#slider-next',
-            prevSelector: '#slider-prev',
-            nextText: '<div class="slider-arrow nextslide"></div>',
-            prevText: '<div class="slider-arrow prevslide"></div>',
-            pager: false,
-            speed: window.settings.defaultAnimationDuration,
-            adaptiveHeight: true,
-            useCSS: false,
-            adaptiveHeightSpeed: window.settings.defaultAnimationDuration,
-            onSlideAfter: function(currentSlide) {
-                $window.trigger('load.slide-count');
-                $('.picture-caption').html(currentSlide.find('img').attr('title'));
-            },
-            onSliderLoad: function() {
-                $window.trigger('resize.slides');
-            }
-        });
-
-        // Update slide counter with current slide number
-        if (slider.length > 0) {
-            $window.on('load.slide-count', function() {
-                var slide_count = slider.getSlideCount();
-                var slide_curr = slider.getCurrentSlide();
-                $('.slide-counter').html((slide_curr + 1) + ' of ' + slide_count);
-                $('.picture-caption').html($('.bxslider li img:last').attr('title'));
-            }).trigger('load.slide-count');
-        }
-
-    });
-})(jQuery);
+  });
+});
