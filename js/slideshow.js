@@ -9,25 +9,25 @@ $(document).ready(function(){
   $('#photo-left').on('click', function(event){
     i--;
     if(i <= 0) i = max;
-    $('#photo-container-1').css('background-image','url(img/programs/program-pics/' + prefix + '/' + prefix + '-' + i + '.jpg)');
+    $('#photo-container-1').css('background-image','url(img/programs/program-pics/' + prefix + '/' + prefix + '-' + i + '.JPG)');
     j--
     if(j <= 0) j = max;
-    $('#photo-container-2').css('background-image','url(img/programs/program-pics/' + prefix + '/' + prefix + '-' + j + '.jpg)');
+    $('#photo-container-2').css('background-image','url(img/programs/program-pics/' + prefix + '/' + prefix + '-' + j + '.JPG)');
     k--;
     if(k <= 0) k = max;
-    $('#photo-container-3').css('background-image','url(img/programs/program-pics/' + prefix + '/' + prefix + '-' + k + '.jpg)');
+    $('#photo-container-3').css('background-image','url(img/programs/program-pics/' + prefix + '/' + prefix + '-' + k + '.JPG)');
   });
 
   $('#photo-right').on('click', function(event){
     i++
     if(i > max) i = 1;
-    $('#photo-container-1').css('background-image','url(img/programs/program-pics/' + prefix + '/' + prefix + '-' + i + '.jpg)');
+    $('#photo-container-1').css('background-image','url(img/programs/program-pics/' + prefix + '/' + prefix + '-' + i + '.JPG)');
     j++
     if(j > max) j = 1;
-    $('#photo-container-2').css('background-image','url(img/programs/program-pics/' + prefix + '/' + prefix + '-' + j + '.jpg)');
+    $('#photo-container-2').css('background-image','url(img/programs/program-pics/' + prefix + '/' + prefix + '-' + j + '.JPG)');
     k++
     if(k > max) k = 1;
-    $('#photo-container-3').css('background-image','url(img/programs/program-pics/' + prefix + '/' + prefix + '-' + k + '.jpg)');
+    $('#photo-container-3').css('background-image','url(img/programs/program-pics/' + prefix + '/' + prefix + '-' + k + '.JPG)');
 
   });
 });
