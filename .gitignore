@@ -3,3 +3,5 @@ public/
 database.rules.json
 firebase.json
 firebase-debug.log
+
+.DS_Store
